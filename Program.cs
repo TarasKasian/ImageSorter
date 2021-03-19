@@ -1,14 +1,13 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.IO;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.Collections.Concurrent;
+using System.IO;
 using System.Reflection;
-using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
-namespace ConsoleApp6
+namespace ImageSorter
 {
     internal enum ResultColor 
     {
@@ -22,7 +21,7 @@ namespace ConsoleApp6
 
     class Program
     {
-        private static string _rootDirPath; //= @"D:\ITProjects\imgSorterTests";
+        private static string _rootDirPath;
 
         private static string _redDir;
 
@@ -87,7 +86,7 @@ namespace ConsoleApp6
 
         private static void CreateFolders() 
         {
-            _redDir = _rootDirPath + @"\R";
+            _redDir = _rootDirPath + @"\B";
             if (!Directory.Exists(_redDir)) 
                 Directory.CreateDirectory(_redDir);
 
@@ -95,7 +94,7 @@ namespace ConsoleApp6
             if (!Directory.Exists(_greenDir))
                 Directory.CreateDirectory(_greenDir);
 
-            _blueDir = _rootDirPath + @"\B";
+            _blueDir = _rootDirPath + @"\R";
             if (!Directory.Exists(_blueDir))
                 Directory.CreateDirectory(_blueDir);
         }
