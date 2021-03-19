@@ -16,9 +16,6 @@ namespace ImageSorter
         Blue
     }
 
-    // TODO: Cover another image formats;
-    //       Improve color detection method.
-
     class Program
     {
         private static string _rootDirPath;
@@ -35,8 +32,8 @@ namespace ImageSorter
 
         private static Dictionary<string, Bitmap> _fileNameBitmapPairDict = new Dictionary<string, Bitmap>();
 
-        //   key - old file name 
-        // value - new file name
+        //    key - old file name 
+        //  value - new file name
         private static ConcurrentDictionary<string, string> _fileNamesDict = new ConcurrentDictionary<string, string>();
 
         private static StaticticsInfo _statisticsInfo = new StaticticsInfo();
