@@ -1,5 +1,10 @@
-# ImageSorter
+# :framed_picture: ImageSorter 1.0 
 
-## TODO:
-1. Refactoring.
-2. Write normal readme.
+Sorts images by dominant color (red, green or blue) into appropriate folders.  
+
+## Usage (windows olny):
+
+1. Build "ImageSorter" project:  
+```dotnet build``` 
+2. Put ImageSorter.exe file to folder with unsorted images
+3. Run it
